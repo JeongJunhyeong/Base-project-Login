@@ -70,10 +70,10 @@ public class AuthService {
 
         while (true) {
             System.out.print("ID (소문자 a-z, 4~12자): ");
-            id = scanner.nextLine().replaceAll("\\s+", "").toLowerCase();
+            id = scanner.nextLine().replaceAll("\\s+", "");
 
             if (!id.matches("[a-z]{4,12}")) {
-                System.out.println("형식이 올바르지 않습니다. 다시 입력해주세요.");
+                System.out.println("ID는 소문자 a-z만 허용되며, 길이는 4~12자여야 합니다.");
                 continue;
             }
 
